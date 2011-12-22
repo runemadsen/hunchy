@@ -1,35 +1,23 @@
 require 'rubygems'
+require "digest/sha1"
 require 'bundler'
 Bundler.require
 require './models'
 
 class Application < Sinatra::Base
   
-  set :root, File.dirname(__FILE__)
-  register Sinatra::AssetPack
+  register Sinatra::SinatraAuthentication
+  set :sinatra_authentication_view_path, Pathname(__FILE__).dirname.expand_path + "views/"
+  use Rack::Session::Cookie, :secret => 'runeskjoldborgmadsen'
+  use Rack::Flash
   register Padrino::Helpers
-
-  assets {
-    serve '/javascripts', :from => 'assets/javascripts'
-    serve '/stylesheets', :from => 'assets/stylesheets'
-    js :front, ['/javascripts/vendor/**/*.js', '/js/app/**/*.js']
-    css :shared, ['/stylesheets/reset.css', '/stylesheets/hunchy.css']
-    js_compression  :jsmin
-    css_compression :sass
-  } 
     
   #   Front
   #---------------------------------------
   
   get '/' do
-    erb :front
-  end
-
-  #   404
-  #---------------------------------------
-
-  not_found do
-    erb :notfound
+    login_required
+    erb :home
   end
   
 end

@@ -5,4 +5,4 @@ DataMapper.setup(:default, {
     :password => '',
     :database => 'hunchy'})
     
-# DataMapper.auto_upgrade!
+DataMapper.auto_migrate!

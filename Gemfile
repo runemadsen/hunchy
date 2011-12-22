@@ -1,11 +1,10 @@
 source :rubygems
 gem 'sinatra'
-
 gem 'dm-core'
 gem 'dm-migrations'
 gem 'padrino-helpers'
-gem 'sass'
-gem 'sinatra-assetpack', :require => 'sinatra/assetpack', :git => 'https://github.com/rstacruz/sinatra-assetpack.git'
+gem 'rack-flash'
+gem "sinatra-authentication", :path => 'gems/sinatra-authentication'
 
 group :development do
   gem 'dm-mysql-adapter'

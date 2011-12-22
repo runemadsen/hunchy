@@ -1,0 +1,59 @@
+body {
+	font-family: Georgia;
+  font-size: 15px;
+	color: #000;
+	background-color: #fefcf8;
+}
+
+.container_12 {
+	padding-top: 30px;
+}
+
+/* 	Fonts
+___________________________________________________ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif;  
+	color: #d25245;
+  font-weight: bold;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 18px;
+}
+
+h2 {
+	font-size: 22px;
+	margin-bottom: 14px;
+}
+
+p {
+		font-family: Georgia;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 22px;
+    margin-bottom: 9px;
+}
+
+a, a:visited {
+	color: #d25245;
+}
+
+/* 	Login
+___________________________________________________ */
+
+#login label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+#login input[type="text"],
+#login input[type="password"]  {
+	width: 290px;
+	font-size: 20px;
+	padding: 5px;
+	border: 1px solid #d9d9d9;
+	margin-bottom: 10px;
+} 

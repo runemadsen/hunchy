@@ -1,0 +1,49 @@
+<div class="grid_5 prefix_1">
+
+	<h1>Hunchy</h1>
+
+	<p>Hunchy is a tool that helps you explore and organize your ideas in a digital form. It's different because - instead of giving you a blank canvas - it encourages brainstorming in a constrained setting.</p>
+
+	<p>Hunchy is very much inspired by the thesis brainstorming workshops at ITP, developed by Zannah Marsh and Marina Zurkow.</p>
+
+</div>
+<div class="grid_4 prefix_1 suffix_1" id="login">
+	
+		<h2>Login</h2>
+		<form method="post" action="/login">
+			<label for="user_email'">Email</label>
+			<input type="text" size="30" name="email">
+	
+			<label for="user_password">Password</label>
+			<input type="password" size="30" name="password" id="user_password"><br />
+	
+			<input type="submit" value="Login">
+		</form>
+		<br /><br />
+		
+		<h2>.. or Sign Up</h2>
+		<form action='/signup' method='post'>
+			<div class='field'>
+				<div class='label'>
+					<label for='user_email'>Email</label>
+				</div><input id='user_email' name='user[email]' size='30' type='text'>
+			</div>
+			<div class='field'>
+				<div class='label'>
+					<label for='user_password'>Password</label>
+				</div><input id='user_password' name='user[password]' size='30' type='password'>
+			</div>
+			<div class='field'>
+				<div class='label'>
+					<label for='user_password_confirmation'>Confirm Password</label>
+				</div><input id='user_password_confirmation' name='user[password_confirmation]' size='30' type='password'>
+			</div>
+			<div class='buttons'>
+				<input type='submit' value='Sign up'> <a class='sinatra_authentication_link' href='/login'>Login</a>
+			</div>
+		</form>
+	
+</div>
+<div class="clear"></div>
+
+
