@@ -80,6 +80,7 @@ DEPENDENCIES
   dm-migrations
   dm-mysql-adapter
   dm-postgres-adapter
+  dm-timestamps
   padrino-helpers
   rack-flash
   sinatra

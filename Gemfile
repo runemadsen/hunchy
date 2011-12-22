@@ -2,6 +2,7 @@ source :rubygems
 gem 'sinatra'
 gem 'dm-core'
 gem 'dm-migrations'
+gem 'dm-timestamps'
 gem 'padrino-helpers'
 gem 'rack-flash'
 gem "sinatra-authentication", :path => 'gems/sinatra-authentication'

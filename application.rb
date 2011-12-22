@@ -20,6 +20,22 @@ class Application < Sinatra::Base
     erb :home
   end
   
+  get '/hunches/new' do
+    login_required
+    erb 'hunches/new'.to_sym
+  end
+  
+  post '/hunches' do
+    login_required
+    hunch = Hunch.create(:hunch => params[:hunch], :dm_user_id => current_user.id)
+    redirect "/hunches/#{hunch.id}/freewriting"
+  end
+  
+  get '/hunches/:id/freewriting' do
+    @hunch = Hunch.get(params[:id])
+    erb 'hunches/freewriting'.to_sym
+  end
+  
 end
 
 
